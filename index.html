@@ -28,9 +28,14 @@
 <body>
     <h1>課程列表</h1>
     <div class="filters">
-        <input type="text" id="searchInput" Placeholder="搜尋課名或老師">
+        <input type="text" id="searchInput" placeholder="搜尋課名或老師">
         <select id="categorySelect">
             <option value="">所有課程類別</option>
+        </select>
+        <select id="modeSelect">
+            <option value="">所有開課形式</option>
+            <option value="video">視訊課程</option>
+            <option value="physical">實體課程</option>
         </select>
         <button id="resetBtn">重置</button>
     </div>
@@ -63,14 +68,14 @@
             { serial: "009", name: "基督教神學(下)", nameUrl: "https://tee.ces.org.tw/course/CT202d", time: "※【同步視訊課程】林口靈糧堂，週二晚上7:00-9:25(9/16-12/2)12週次", teacher: "廖元威", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT202d", category: "神學類" },
             { serial: "010", name: "舊約特殊文體與釋經講道（進階課程）", nameUrl: "https://tee.ces.org.tw/course/PA247", time: "※【同步視訊課程】南京東路禮拜堂新安中心教室，週二晚上7:00-9:35(9/30-12/9)11週次", teacher: "黃正人", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA247", category: "教牧類" },
             { serial: "011", name: "摩西五經導讀", nameUrl: "https://tee.ces.org.tw/course/OT213a", time: "※【全視訊課程】週三下午2:00-4:25(9/17-12/3)12週次", teacher: "賴建國", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT213a", category: "舊約類" },
-            { serial: "012", name: "大小先知書導讀", nameUrl: "https://tee.ces.org.tw/course/OT205f", time: "※【全視訊課程】週三晚上7:00-9:25(9/17-12/3)12週次", teacher: "黃立仁", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT205f", category: "舊約類" },
+            { serial: "012", name: "大小先知書導讀", nameUrl: "https://tee.ces.org.tw/course/OT205f", time: "※【全視訊課程】週三晚上7:00-9:25(9/17-10/3)12週次", teacher: "黃立仁", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT205f", category: "舊約類" },
             { serial: "013", name: "青少年牧養理念與門徒培育", nameUrl: "https://tee.ces.org.tw/course/PA351", time: "※【全視訊課程】週三晚上7:00-9:35(9/17-11/26)11週次", teacher: "蘇俊宗", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA351", category: "教牧類" },
             { serial: "014", name: "全民希臘文(進階)：登山寶訓", nameUrl: "https://tee.ces.org.tw/course/LA157", time: "※【全視訊課程】週三晚上7:00-9:25(9/17-12/3)12週次", teacher: "張奇軍", teacherUrl: "https://tee.ces.org.tw/course/teacher/LA157", category: "語文類" },
             { serial: "015", name: "婚前教育與婚後重建", nameUrl: "https://tee.ces.org.tw/course/PC826a", time: "※【全視訊課程】週四上午9:00-11:25(9/18-12/4)(12週次)", teacher: "周玖玫", teacherUrl: "https://tee.ces.org.tw/course/teacher/PC826a", category: "輔導類" },
             { serial: "016", name: "釋經學入門：從文本到意義", nameUrl: "https://tee.ces.org.tw/course/BH137", time: "※【同步視訊課程】景美禮拜堂教室，週四晚上7:00-9:10(9/18-12/11)13週次", teacher: "張長暉", teacherUrl: "https://tee.ces.org.tw/course/teacher/BH137", category: "釋經類" },
             { serial: "017", name: "舊約歷史書導讀", nameUrl: "https://tee.ces.org.tw/course/OT216h", time: "※【同步視訊課程】台北榮耀堂教室，週四晚上7:00-9:25(9/18-12/4)12週次", teacher: "左大萱", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT216h", category: "舊約類" },
             { serial: "018", name: "敬拜禮儀的理論與實務", nameUrl: "https://tee.ces.org.tw/course/PA248", time: "※【同步視訊課程】康華禮拜堂，週四晚上7:00-9:35(9/18-12/11)12週次", teacher: "馬振龍", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA248", category: "教牧類" },
-            { serial: "019", name: "基督教神學(上)", nameUrl: "https://tee.ces.org.tw/course/CT201a", time: "※【全視訊課程】週五晚上7:00-9:25(9/1-12/19)12週次", teacher: "史弘揚", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT201a", category: "神學類" },
+            { serial: "019", name: "基督教神學(上)", nameUrl: "https://tee.ces.org.tw/course/CT201a", time: "※【全視訊課程】週五晚上7:00-9:25(9/19-12/19)12週次", teacher: "史弘揚", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT201a", category: "神學類" },
             { serial: "020", name: "以心理衛生與精神健康為基礎的牧靈工作", nameUrl: "https://tee.ces.org.tw/course/PC629", time: "※【同步視訊課程】康華禮拜堂，週五晚上7:00-9:25(9/19-12/19)12週次", teacher: "王仁邦", teacherUrl: "https://tee.ces.org.tw/course/teacher/PC629", category: "輔導類" },
             { serial: "021", name: "宣教中國議題", nameUrl: "https://tee.ces.org.tw/course/EM290", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/9/1、9/8、9/15、9/22、9/29、10/13、10/20、10/27、11/3、11/10", teacher: "李約瑟", teacherUrl: "https://tee.ces.org.tw/course/teacher/EM290", category: "宣教類" },
             { serial: "022", name: "福音書導讀", nameUrl: "https://tee.ces.org.tw/course/NT224h", time: "※外區合作課程（限合作單位同學選讀） 上課日期：114/9/16～12/2", teacher: "陳美如", teacherUrl: "https://tee.ces.org.tw/course/teacher/NT224h", category: "新約類" },
@@ -94,22 +99,23 @@
             const params = new URLSearchParams(window.location.search);
             return {
                 q: params.get('q') || '',
-                cat: params.get('cat') || ''
+                cat: params.get('cat') || '',
+                mode: params.get('mode') || ''
             };
         }
 
         // 更新 URL 參數（不重整頁面）
-        function updateUrl(search = '', category = '') {
+        function updateUrl(search = '', category = '', mode = '') {
             const url = new URL(window.location);
+            ['q', 'cat', 'mode'].forEach(key => url.searchParams.delete(key));
             if (search) url.searchParams.set('q', search);
-            else url.searchParams.delete('q');
             if (category) url.searchParams.set('cat', category);
-            else url.searchParams.delete('cat');
+            if (mode) url.searchParams.set('mode', mode);
             window.history.replaceState({}, '', url);
         }
 
         function populateCategories() {
-            const categories = [...new Set(courses.map(course => course.category))];
+            const categories = [...new Set(courses.map(c => c.category))];
             const select = document.getElementById('categorySelect');
             categories.forEach(cat => {
                 const option = document.createElement('option');
@@ -143,47 +149,57 @@
         function filterCourses() {
             const search = document.getElementById('searchInput').value.trim().toLowerCase();
             const category = document.getElementById('categorySelect').value;
+            const mode = document.getElementById('modeSelect').value;
+            const timeText = course => course.time;
 
             const filtered = courses.filter(course => {
+                // 搜尋條件
                 const matchesSearch = !search || 
                     course.name.toLowerCase().includes(search) || 
                     course.teacher.toLowerCase().includes(search);
+
+                // 類別條件
                 const matchesCategory = !category || course.category === category;
-                return matchesSearch && matchesCategory;
+
+                // 課程形式條件
+                let matchesMode = true;
+                if (mode === 'video') {
+                    matchesMode = timeText(course).includes('全視訊課程') || timeText(course).includes('同步視訊課程');
+                } else if (mode === 'physical') {
+                    matchesMode = timeText(course).includes('實體課程') || timeText(course).includes('同步視訊課程');
+                }
+
+                return matchesSearch && matchesCategory && matchesMode;
             });
 
             renderCourses(filtered);
-            updateUrl(search, category); // 同步更新 URL
+            updateUrl(search, category, mode);
         }
 
-        // 初始化：讀取 URL 參數並套用
+        // 初始化：從 URL 載入預設值
         function initFiltersFromUrl() {
-            const { q, cat } = getUrlParams();
-            const searchInput = document.getElementById('searchInput');
-            const categorySelect = document.getElementById('categorySelect');
+            const { q, cat, mode } = getUrlParams();
 
-            if (q) {
-                searchInput.value = decodeURIComponent(q);
-            }
-            if (cat) {
-                categorySelect.value = decodeURIComponent(cat);
-            }
+            if (q) document.getElementById('searchInput').value = decodeURIComponent(q);
+            if (cat) document.getElementById('categorySelect').value = decodeURIComponent(cat);
+            if (mode) document.getElementById('modeSelect').value = mode;
 
-            // 延遲執行確保 DOM 已載入
             setTimeout(filterCourses, 0);
         }
 
-        // 重置
+        // 重置按鈕
         document.getElementById('resetBtn').addEventListener('click', () => {
             document.getElementById('searchInput').value = '';
             document.getElementById('categorySelect').value = '';
-            updateUrl('', '');
+            document.getElementById('modeSelect').value = '';
+            updateUrl();
             renderCourses(courses);
         });
 
-        // 即時監聽
+        // 事件監聽
         document.getElementById('searchInput').addEventListener('input', filterCourses);
         document.getElementById('categorySelect').addEventListener('change', filterCourses);
+        document.getElementById('modeSelect').addEventListener('change', filterCourses);
 
         // 啟動
         populateCategories();
