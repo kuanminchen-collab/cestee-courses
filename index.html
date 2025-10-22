@@ -21,14 +21,14 @@
         @media (max-width: 768px) {
             .filters { flex-direction: column; align-items: center; }
             th, td { padding: 8px; font-size: 14px; }
-            table { min-width: 600px; } /* Ensure horizontal scroll */
+            table { min-width: 600px; }
         }
     </style>
 </head>
 <body>
     <h1>課程列表</h1>
     <div class="filters">
-        <input type="text" id="searchInput" placeholder="搜尋課名或老師">
+        <input type="text" id="searchInput" Placeholder="搜尋課名或老師">
         <select id="categorySelect">
             <option value="">所有課程類別</option>
         </select>
@@ -70,7 +70,7 @@
             { serial: "016", name: "釋經學入門：從文本到意義", nameUrl: "https://tee.ces.org.tw/course/BH137", time: "※【同步視訊課程】景美禮拜堂教室，週四晚上7:00-9:10(9/18-12/11)13週次", teacher: "張長暉", teacherUrl: "https://tee.ces.org.tw/course/teacher/BH137", category: "釋經類" },
             { serial: "017", name: "舊約歷史書導讀", nameUrl: "https://tee.ces.org.tw/course/OT216h", time: "※【同步視訊課程】台北榮耀堂教室，週四晚上7:00-9:25(9/18-12/4)12週次", teacher: "左大萱", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT216h", category: "舊約類" },
             { serial: "018", name: "敬拜禮儀的理論與實務", nameUrl: "https://tee.ces.org.tw/course/PA248", time: "※【同步視訊課程】康華禮拜堂，週四晚上7:00-9:35(9/18-12/11)12週次", teacher: "馬振龍", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA248", category: "教牧類" },
-            { serial: "019", name: "基督教神學(上)", nameUrl: "https://tee.ces.org.tw/course/CT201a", time: "※【全視訊課程】週五晚上7:00-9:25(9/19-12/19)12週次", teacher: "史弘揚", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT201a", category: "神學類" },
+            { serial: "019", name: "基督教神學(上)", nameUrl: "https://tee.ces.org.tw/course/CT201a", time: "※【全視訊課程】週五晚上7:00-9:25(9/1-12/19)12週次", teacher: "史弘揚", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT201a", category: "神學類" },
             { serial: "020", name: "以心理衛生與精神健康為基礎的牧靈工作", nameUrl: "https://tee.ces.org.tw/course/PC629", time: "※【同步視訊課程】康華禮拜堂，週五晚上7:00-9:25(9/19-12/19)12週次", teacher: "王仁邦", teacherUrl: "https://tee.ces.org.tw/course/teacher/PC629", category: "輔導類" },
             { serial: "021", name: "宣教中國議題", nameUrl: "https://tee.ces.org.tw/course/EM290", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/9/1、9/8、9/15、9/22、9/29、10/13、10/20、10/27、11/3、11/10", teacher: "李約瑟", teacherUrl: "https://tee.ces.org.tw/course/teacher/EM290", category: "宣教類" },
             { serial: "022", name: "福音書導讀", nameUrl: "https://tee.ces.org.tw/course/NT224h", time: "※外區合作課程（限合作單位同學選讀） 上課日期：114/9/16～12/2", teacher: "陳美如", teacherUrl: "https://tee.ces.org.tw/course/teacher/NT224h", category: "新約類" },
@@ -81,13 +81,32 @@
             { serial: "027", name: "啟示錄", nameUrl: "https://tee.ces.org.tw/course/NT118", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/7/9、7/10、7/11、7/16、7/17、7/18、7/23～26", teacher: "吳獻章", teacherUrl: "https://tee.ces.org.tw/course/teacher/NT118", category: "新約類" },
             { serial: "028", name: "醫治釋放禱告的神學與實務", nameUrl: "https://tee.ces.org.tw/course/PA122b", time: "※海外合作課程（限合作單位同學選讀）  上課日期：8/1～8/9全實體上課（無線上）", teacher: "陳志宏", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA122b", category: "教牧類" },
             { serial: "029", name: "教會歷史（一）", nameUrl: "https://tee.ces.org.tw/course/CH125", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/8/21、9/4、9/11、8/26～31", teacher: "周學信", teacherUrl: "https://tee.ces.org.tw/course/teacher/CH125", category: "歷史類" },
-            { serial: "030", name: "講道學", nameUrl: "https://tee.ces.org.tw/course/PA208a", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/9/16、9/23、10/7、10/14、10/21、10/2、11/4、11/11", teacher: "戴繼宗", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA208a", category: "教牧類" },
-            { serial: "031", name: "福音神學（下）", nameUrl: "https://tee.ces.org.tw/course/CT265", time: "※海外合作課程（限合作單位同學選讀）  上課日期：114/10/5、10/12、10/19、10/26、11/2、11/9", teacher: "傅立德", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT265", category: "神學類" },
+            { serial: "030", name: "講道學", nameUrl: "https://tee.ces.org.tw/course/PA208a", time: "※海外合作課程（限合作單位同學選讀） 上課日期：114/9/16、9/23、10/7、10/14、10/21、10/2、11/4、11/11", teacher: "戴繼宗", teacherUrl: "https://tee.ces.org.tw/course/teacher/PA208a", category: "教牧類" },
+            { serial: "031", name: "福音神學（下）", nameUrl: "https://tee.ces.org.tw/course/CT265", time: "※海外合作課程（限合作單位同學選讀） 上課日期：114/10/5、10/12、10/19、10/26、11/2、11/9", teacher: "傅立德", teacherUrl: "https://tee.ces.org.tw/course/teacher/CT265", category: "神學類" },
             { serial: "032", name: "摩西五經(上)【多媒體聖經】", nameUrl: "https://tee.ces.org.tw/course/OT229", time: "網上上課，90天內完成課程", teacher: "賴建國<br>黃彩雲", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT229", category: "舊約類" },
             { serial: "033", name: "大先知書【多媒體聖經】", nameUrl: "https://tee.ces.org.tw/course/OT232", time: "網上上課，90天內完成課程", teacher: "吳獻章<br>邱琳雅", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT232", category: "舊約類" },
             { serial: "034", name: "詩歌智慧書【多媒體聖經】", nameUrl: "https://tee.ces.org.tw/course/OT234", time: "網上上課，90天內完成課程", teacher: "吳獻章<br>邱琳雅", teacherUrl: "https://tee.ces.org.tw/course/teacher/OT234", category: "舊約類" },
             { serial: "035", name: "保羅書信(中)【多媒體聖經】", nameUrl: "https://tee.ces.org.tw/course/NT247", time: "網上上課，90天內完成課程", teacher: "蔡筱楓", teacherUrl: "https://tee.ces.org.tw/course/teacher/NT247", category: "新約類" }
         ];
+
+        // 解析 URL 參數
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                q: params.get('q') || '',
+                cat: params.get('cat') || ''
+            };
+        }
+
+        // 更新 URL 參數（不重整頁面）
+        function updateUrl(search = '', category = '') {
+            const url = new URL(window.location);
+            if (search) url.searchParams.set('q', search);
+            else url.searchParams.delete('q');
+            if (category) url.searchParams.set('cat', category);
+            else url.searchParams.delete('cat');
+            window.history.replaceState({}, '', url);
+        }
 
         function populateCategories() {
             const categories = [...new Set(courses.map(course => course.category))];
@@ -122,26 +141,53 @@
         }
 
         function filterCourses() {
-            const search = document.getElementById('searchInput').value.toLowerCase();
+            const search = document.getElementById('searchInput').value.trim().toLowerCase();
             const category = document.getElementById('categorySelect').value;
+
             const filtered = courses.filter(course => {
-                const matchesSearch = course.name.toLowerCase().includes(search) || course.teacher.toLowerCase().includes(search);
+                const matchesSearch = !search || 
+                    course.name.toLowerCase().includes(search) || 
+                    course.teacher.toLowerCase().includes(search);
                 const matchesCategory = !category || course.category === category;
                 return matchesSearch && matchesCategory;
             });
+
             renderCourses(filtered);
+            updateUrl(search, category); // 同步更新 URL
         }
 
-        document.getElementById('searchInput').addEventListener('input', filterCourses);
-        document.getElementById('categorySelect').addEventListener('change', filterCourses);
+        // 初始化：讀取 URL 參數並套用
+        function initFiltersFromUrl() {
+            const { q, cat } = getUrlParams();
+            const searchInput = document.getElementById('searchInput');
+            const categorySelect = document.getElementById('categorySelect');
+
+            if (q) {
+                searchInput.value = decodeURIComponent(q);
+            }
+            if (cat) {
+                categorySelect.value = decodeURIComponent(cat);
+            }
+
+            // 延遲執行確保 DOM 已載入
+            setTimeout(filterCourses, 0);
+        }
+
+        // 重置
         document.getElementById('resetBtn').addEventListener('click', () => {
             document.getElementById('searchInput').value = '';
             document.getElementById('categorySelect').value = '';
+            updateUrl('', '');
             renderCourses(courses);
         });
 
+        // 即時監聽
+        document.getElementById('searchInput').addEventListener('input', filterCourses);
+        document.getElementById('categorySelect').addEventListener('change', filterCourses);
+
+        // 啟動
         populateCategories();
-        renderCourses(courses);
+        initFiltersFromUrl();
     </script>
 </body>
 </html>
