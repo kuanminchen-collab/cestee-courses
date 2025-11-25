@@ -55,315 +55,55 @@
     </div>
     <p id="no-results">無符合條件的課程</p>
 
-    <script>
-        const courses = [
-            {
-                "serial": "001",
-                "name": "希伯來文讀經：出埃及記",
-                "nameUrl": "https://tee.ces.org.tw/course/LA158",
-                "time": "※【全視訊課程】週一晚上7:00-9:25(2/23-5/18)12週次",
-                "teacher": "陳鳳翔",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/LA158",
-                "category": "語文類"
-            },
-            {
-                "serial": "002",
-                "name": "情緒的覺察與調節",
-                "nameUrl": "https://tee.ces.org.tw/course/PC129",
-                "time": "※【全視訊課程】週一晚上7:00-9:35(2/23-5/25)11週次",
-                "teacher": "佘玉珠",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PC129",
-                "category": "輔導類"
-            },
-            {
-                "serial": "003",
-                "name": "基督教倫理學",
-                "nameUrl": "https://tee.ces.org.tw/course/CT403c",
-                "time": "※【全視訊課程】週一晚上7:00-9:25(3/2-5/18)11週次",
-                "teacher": "陳文倫",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/CT403c",
-                "category": "神學類"
-            },
-            {
-                "serial": "004",
-                "name": "屬靈創傷解碼：從理解到療癒",
-                "nameUrl": "https://tee.ces.org.tw/course/PC524",
-                "time": "※【全視訊課程】週二上午9:00-11:35(2/24-5/5)11週次",
-                "teacher": "駱月絹",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PC524",
-                "category": "輔導類"
-            },
-            {
-                "serial": "005",
-                "name": "從革新到宣揚-近代與當代教會宣教發展史",
-                "nameUrl": "https://tee.ces.org.tw/course/EM309",
-                "time": "※【全視訊課程】週二晚上7:00-9:25(2/24-5/12)12週次",
-                "teacher": "李允中",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/EM309",
-                "category": "宣教類"
-            },
-            {
-                "serial": "006",
-                "name": "摩西五經導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/OT213p",
-                "time": "※【全視訊課程】週二晚上7:00-9:35(2/24-5/5)11週次",
-                "teacher": "林智偉",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT213p",
-                "category": "舊約類"
-            },
-            {
-                "serial": "007",
-                "name": "穆斯林世界觀與福音策略",
-                "nameUrl": "https://tee.ces.org.tw/course/EM310a",
-                "time": "※【全視訊課程】週二晚上7:00-10:00(3/3-5/5)10週次",
-                "teacher": "彭書穎",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/EM310a",
-                "category": "宣教類"
-            },
-            {
-                "serial": "008",
-                "name": "靈修神學與實踐",
-                "nameUrl": "https://tee.ces.org.tw/course/CT262b",
-                "time": "※南京東路禮拜堂教室【同步視訊課程】週二晚上7:00-9:25(2/24-5/12)12週次",
-                "teacher": "王文基",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/CT262b",
-                "category": "神學類"
-            },
-            {
-                "serial": "009",
-                "name": "保羅書信導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/NTj229",
-                "time": "※林口靈糧堂教室【同步視訊課程】週二晚上7:00-9:25(3/3-5/19)12週次",
-                "teacher": "張奇軍",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NTj229",
-                "category": "新約類"
-            },
-            {
-                "serial": "010",
-                "name": "聖經與輔導",
-                "nameUrl": "https://tee.ces.org.tw/course/PC513c",
-                "time": "※【全視訊課程】週三晚上7:00-9:25(2/25-5/13)12週次",
-                "teacher": "孫榮岩",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PC513c",
-                "category": "輔導類"
-            },
-            {
-                "serial": "011",
-                "name": "AI福音裝備：打造你的使命影集",
-                "nameUrl": "https://tee.ces.org.tw/course/PA249",
-                "time": "※信友堂何烈館教室【實體課程】 週三下午3:00-5:00(3/4-4/22)8週次",
-                "teacher": "王小明",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PA249",
-                "category": "教牧類"
-            },
-            {
-                "serial": "012",
-                "name": "助人倫理：為關懷陪伴立界限",
-                "nameUrl": "https://tee.ces.org.tw/course/PC521",
-                "time": "※【全視訊課程】週四上午9:00-11:25(2/26-5/14)12週次",
-                "teacher": "周玖玫",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PC521",
-                "category": "輔導類"
-            },
-            {
-                "serial": "013",
-                "name": "青少年牧養教案設計與媒材應用",
-                "nameUrl": "https://tee.ces.org.tw/course/PA352",
-                "time": "※【全視訊課程】週四晚上7:00-9:25(2/26-5/14)12週次",
-                "teacher": "周子甯",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PA352",
-                "category": "教牧類"
-            },
-            {
-                "serial": "014",
-                "name": "舊約歷史書導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/OT216h",
-                "time": "※康華禮拜堂教室【同步視訊課程】週四晚上7:00-9:25(2/26-5/14)12週次",
-                "teacher": "左大萱",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT216h",
-                "category": "舊約類"
-            },
-            {
-                "serial": "015",
-                "name": "用古人腦袋細讀創世記",
-                "nameUrl": "https://tee.ces.org.tw/course/OT254",
-                "time": "※景美禮拜堂教室【同步視訊課程】週四晚上7:00-9:10(2/26-5/21)13週次",
-                "teacher": "張長暉",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT254",
-                "category": "舊約類"
-            },
-            {
-                "serial": "016",
-                "name": "基督教神學(下)",
-                "nameUrl": "https://tee.ces.org.tw/course/CT202a",
-                "time": "※【全視訊課程】週五晚上7:00-9:35(3/6-5/29)11週次",
-                "teacher": "史弘揚",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/CT202a",
-                "category": "神學類"
-            },
-            {
-                "serial": "017",
-                "name": "詩歌智慧書導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/OT206a",
-                "time": "※【全視訊課程】週五晚上7:00-9:35(3/6-5/29)11週次",
-                "teacher": "蔡筱楓",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT206a",
-                "category": "舊約類"
-            },
-            {
-                "serial": "018",
-                "name": "馬太福音的結構美學與門徒神學",
-                "nameUrl": "https://tee.ces.org.tw/course/NT335",
-                "time": "※【全視訊課程】週五晚上7:00-9:45(3/13-5/29)10週次",
-                "teacher": "于厚恩",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT335",
-                "category": "新約類"
-            },
-            {
-                "serial": "019",
-                "name": "從「聖地風俗」看聖經",
-                "nameUrl": "https://tee.ces.org.tw/course/BH126",
-                "time": "※浸信會頌恩堂教室【同步視訊課程】週六上午9:00-12:4(3/7-6/6)8週次",
-                "teacher": "陳美如",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/BH126",
-                "category": "釋經類"
-            },
-            {
-                "serial": "020",
-                "name": "詩歌智慧書導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/OT206n",
-                "time": "※海外合作課程（限合作單位同學選讀） 上課日期：115/1/12-3/2、3/9-10",
-                "teacher": "賴建國<br>崔勝洪",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT206n",
-                "category": "舊約類"
-            },
-            {
-                "serial": "021",
-                "name": "馬可福音",
-                "nameUrl": "https://tee.ces.org.tw/course/NT102b",
-                "time": "※海外合作課程（限合作單位同學選讀） 上課日期：115/1/15-3/19",
-                "teacher": "葉雅蓮",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT102b",
-                "category": "新約類"
-            },
-            {
-                "serial": "022",
-                "name": "生命倫理與實務",
-                "nameUrl": "https://tee.ces.org.tw/course/CT407a",
-                "time": "※海外合作課程（限合作單位同學選讀） 上課日期：115/2/7、3/7、3/28、5/2、6/6",
-                "teacher": "郭英調",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/CT407a",
-                "category": "神學類"
-            },
-            {
-                "serial": "023",
-                "name": "福音領袖塑造",
-                "nameUrl": "https://tee.ces.org.tw/course/PA336",
-                "time": "※外區合作課程（限合作單位同學選讀） 上課日期：115/2/24-5/19",
-                "teacher": "施永昌",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PA336",
-                "category": "教牧類"
-            },
-            {
-                "serial": "024",
-                "name": "穆斯林世界觀與福音策略",
-                "nameUrl": "https://tee.ces.org.tw/course/EM310",
-                "time": "※海外合作課程（限合作單位同學選讀） 上課日期：115/3/2-5/4",
-                "teacher": "彭書穎",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/EM310",
-                "category": "宣教類"
-            },
-            {
-                "serial": "025",
-                "name": "新約概論(上)",
-                "nameUrl": "https://tee.ces.org.tw/course/NT203a",
-                "time": "※外區合作課程（限合作單位同學選讀） 上課日期：115/3/18-5/6",
-                "teacher": "林智偉",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT203a",
-                "category": "新約類"
-            },
-            {
-                "serial": "026",
-                "name": "助人歷程與技巧",
-                "nameUrl": "https://tee.ces.org.tw/course/PC818b",
-                "time": "※外區合作課程（限合作單位同學選讀） 上課日期：115/3/18-5/22",
-                "teacher": "孫榮岩",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PC818b",
-                "category": "輔導類"
-            },
-            {
-                "serial": "027",
-                "name": "領袖學學領袖",
-                "nameUrl": "https://tee.ces.org.tw/course/PA250",
-                "time": "※外區合作課程（限合作單位同學選讀） 上課日期：115/4/7-5/19",
-                "teacher": "洪淑姮",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/PA250",
-                "category": "教牧類"
-            },
-            {
-                "serial": "028",
-                "name": "摩西五經導讀",
-                "nameUrl": "https://tee.ces.org.tw/course/OT213w",
-                "time": "※外區合作課程（限合作單位同學選讀） 上課日期：115/4/9-5/21",
-                "teacher": "郭念平",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT213w",
-                "category": "舊約類"
-            },
-            {
-                "serial": "029",
-                "name": "摩西五經(下)【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/OT230",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "賴建國<br>黃彩雲",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT230",
-                "category": "舊約類"
-            },
-            {
-                "serial": "030",
-                "name": "小先知書【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/OT233",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "蔡筱楓<br>邱琳雅",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT233",
-                "category": "舊約類"
-            },
-            {
-                "serial": "031",
-                "name": "詩篇選讀【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/OT235",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "賴建國<br>邱琳雅",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/OT235",
-                "category": "舊約類"
-            },
-            {
-                "serial": "032",
-                "name": "馬可福音【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/NT102a",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "葉雅蓮<br>蘇美雅",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT102a",
-                "category": "新約類"
-            },
-            {
-                "serial": "033",
-                "name": "希伯來書【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/NT114b",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "吳存仁<br>田心",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT114b",
-                "category": "新約類"
-            },
-            {
-                "serial": "034",
-                "name": "使徒行傳【多媒體聖經】",
-                "nameUrl": "https://tee.ces.org.tw/course/NT133",
-                "time": "※【多媒體聖經】網上上課，90天內完成課程",
-                "teacher": "蔡筱楓<br>姜蓓蒂",
-                "teacherUrl": "https://tee.ces.org.tw/course/teacher/NT133",
-                "category": "新約類"
-            }
-        ];
+    <script>const courses = [
+            {"serial":"A01","name":"教會青少年牧養與教導【學分班】","nameUrl":"https://tee.ces.edu.tw/course/PA353","time":"※華神八德校區【實體課程】，週二上午8:30-11:20","teacher":"莊舒華","teacherUrl":"https://tee.ces.edu.tw/course/teacher/PA353","category":"教牧類"},
+            {"serial":"A02","name":"從哥林多後書看僕人事奉【學分班】","nameUrl":"https://tee.ces.edu.tw/course/PA251","time":"※華神八德校區【實體課程】，週四上午8:30-11:20","teacher":"柴子高","teacherUrl":"https://tee.ces.edu.tw/course/teacher/PA251","category":"教牧類"},
+            {"serial":"A03","name":"教會財務管理【學分班】","nameUrl":"https://tee.ces.edu.tw/course/PA123","time":"※華神八德校區【實體課程】，週一上午8:30-11:20","teacher":"陳志宏","teacherUrl":"https://tee.ces.edu.tw/course/teacher/PA123","category":"教牧類"},
+            {"serial":"A04","name":"心理疾患的認識與關顧【學分班】","nameUrl":"https://tee.ces.edu.tw/course/PC834","time":"※華神八德校區【實體課程】，週三上午8:30-11:20","teacher":"焦如品","teacherUrl":"https://tee.ces.edu.tw/course/teacher/PC834","category":"輔導類"},
+            {"serial":"A05","name":"衛斯理傳統：突破性恩典與實踐性救恩【學分班】","nameUrl":"https://tee.ces.edu.tw/course/CT274","time":"※華神八德校區【實體課程】，週四上午8:30-11:20(2/26-6/25)","teacher":"張聖佳","teacherUrl":"https://tee.ces.edu.tw/course/teacher/CT274","category":"神學類"},
+            {"serial":"B01","name":"釋經講道與牧養【非學分班】","nameUrl":"https://tee.ces.edu.tw/course/PA239a","time":"※【全視訊課程】週一晚上7:00-9:35(2/23-5/18)","teacher":"劉幸枝","teacherUrl":"https://tee.ces.edu.tw/course/teacher/PA239a","category":"教牧類"}
+            {"serial":"001","name":"希伯來文讀經：出埃及記","nameUrl":"https://tee.ces.org.tw/course/LA158","time":"※【全視訊課程】週一晚上7:00-9:25(2/23-5/18)12週次","teacher":"陳鳳翔","teacherUrl":"https://tee.ces.org.tw/course/teacher/LA158","category":"語文類"},
+            {"serial":"002","name":"情緒的覺察與調節","nameUrl":"https://tee.ces.org.tw/course/PC129","time":"※【全視訊課程】週一晚上7:00-9:35(2/23-5/25)11週次","teacher":"佘玉珠","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC129","category":"輔導類"},
+            {"serial":"003","name":"基督教倫理學","nameUrl":"https://tee.ces.org.tw/course/CT403c","time":"※【全視訊課程】週一晚上7:00-9:25(3/2-5/18)11週次","teacher":"陳文倫","teacherUrl":"https://tee.ces.org.tw/course/teacher/CT403c","category":"神學類"},
+            {"serial":"004","name":"屬靈創傷解碼：從理解到療癒","nameUrl":"https://tee.ces.org.tw/course/PC524","time":"※【全視訊課程】週二上午9:00-11:35(2/24-5/5)11週次","teacher":"駱月絹","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC524","category":"輔導類"},
+            {"serial":"005","name":"從革新到宣揚-近代與當代教會宣教發展史","nameUrl":"https://tee.ces.org.tw/course/EM309","time":"※【全視訊課程】週二晚上7:00-9:25(2/24-5/12)12週次","teacher":"李允中","teacherUrl":"https://tee.ces.org.tw/course/teacher/EM309","category":"宣教類"},
+            {"serial":"006","name":"摩西五經導讀","nameUrl":"https://tee.ces.org.tw/course/OT213p","time":"※【全視訊課程】週二晚上7:00-9:35(2/24-5/5)11週次","teacher":"林智偉","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT213p","category":"舊約類"},
+            {"serial":"007","name":"穆斯林世界觀與福音策略","nameUrl":"https://tee.ces.org.tw/course/EM310a","time":"※【全視訊課程】週二晚上7:00-10:00(3/3-5/5)10週次","teacher":"彭書穎","teacherUrl":"https://tee.ces.org.tw/course/teacher/EM310a","category":"宣教類"},
+            {"serial":"008","name":"靈修神學與實踐","nameUrl":"https://tee.ces.org.tw/course/CT262b","time":"※南京東路禮拜堂教室【同步視訊課程】週二晚上7:00-9:25(2/24-5/12)12週次","teacher":"王文基","teacherUrl":"https://tee.ces.org.tw/course/teacher/CT262b","category":"神學類"},
+            {"serial":"009","name":"保羅書信導讀","nameUrl":"https://tee.ces.org.tw/course/NTj229","time":"※林口靈糧堂教室【同步視訊課程】週二晚上7:00-9:25(3/3-5/19)12週次","teacher":"張奇軍","teacherUrl":"https://tee.ces.org.tw/course/teacher/NTj229","category":"新約類"},
+            {"serial":"010","name":"聖經與輔導","nameUrl":"https://tee.ces.org.tw/course/PC513c","time":"※【全視訊課程】週三晚上7:00-9:25(2/25-5/13)12週次","teacher":"孫榮岩","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC513c","category":"輔導類"},
+            {"serial":"011","name":"AI福音裝備：打造你的使命影集","nameUrl":"https://tee.ces.org.tw/course/PA249","time":"※信友堂何烈館教室【實體課程】 週三下午3:00-5:00(3/4-4/22)8週次","teacher":"王小明","teacherUrl":"https://tee.ces.org.tw/course/teacher/PA249","category":"教牧類"},
+            {"serial":"012","name":"助人倫理：為關懷陪伴立界限","nameUrl":"https://tee.ces.org.tw/course/PC521","time":"※【全視訊課程】週四上午9:00-11:25(2/26-5/14)12週次","teacher":"周玖玫","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC521","category":"輔導類"},
+            {"serial":"013","name":"青少年牧養教案設計與媒材應用","nameUrl":"https://tee.ces.org.tw/course/PA352","time":"※【全視訊課程】週四晚上7:00-9:25(2/26-5/14)12週次","teacher":"周子甯","teacherUrl":"https://tee.ces.org.tw/course/teacher/PA352","category":"教牧類"},
+            {"serial":"014","name":"舊約歷史書導讀","nameUrl":"https://tee.ces.org.tw/course/OT216h","time":"※康華禮拜堂教室【同步視訊課程】週四晚上7:00-9:25(2/26-5/14)12週次","teacher":"左大萱","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT216h","category":"舊約類"},
+            {"serial":"015","name":"用古人腦袋細讀創世記","nameUrl":"https://tee.ces.org.tw/course/OT254","time":"※景美禮拜堂教室【同步視訊課程】週四晚上7:00-9:10(2/26-5/21)13週次","teacher":"張長暉","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT254","category":"舊約類"},
+            {"serial":"016","name":"基督教神學(下)","nameUrl":"https://tee.ces.org.tw/course/CT202a","time":"※【全視訊課程】週五晚上7:00-9:35(3/6-5/29)11週次","teacher":"史弘揚","teacherUrl":"https://tee.ces.org.tw/course/teacher/CT202a","category":"神學類"},
+            {"serial":"017","name":"詩歌智慧書導讀","nameUrl":"https://tee.ces.org.tw/course/OT206a","time":"※【全視訊課程】週五晚上7:00-9:35(3/6-5/29)11週次","teacher":"蔡筱楓","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT206a","category":"舊約類"},
+            {"serial":"018","name":"馬太福音的結構美學與門徒神學","nameUrl":"https://tee.ces.org.tw/course/NT335","time":"※【全視訊課程】週五晚上7:00-9:45(3/13-5/29)10週次","teacher":"于厚恩","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT335","category":"新約類"},
+            {"serial":"019","name":"從「聖地風俗」看聖經","nameUrl":"https://tee.ces.org.tw/course/BH126","time":"※浸信會頌恩堂教室【同步視訊課程】週六上午9:00-12:4(3/7-6/6)8週次","teacher":"陳美如","teacherUrl":"https://tee.ces.org.tw/course/teacher/BH126","category":"釋經類"},
+            {"serial":"020","name":"詩歌智慧書導讀","nameUrl":"https://tee.ces.org.tw/course/OT206n","time":"※海外合作課程（限合作單位同學選讀） 上課日期：115/1/12-3/2、3/9-10","teacher":"賴建國<br>崔勝洪","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT206n","category":"舊約類"},
+            {"serial":"021","name":"馬可福音","nameUrl":"https://tee.ces.org.tw/course/NT102b","time":"※海外合作課程（限合作單位同學選讀） 上課日期：115/1/15-3/19","teacher":"葉雅蓮","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT102b","category":"新約類"},
+            {"serial":"022","name":"生命倫理與實務","nameUrl":"https://tee.ces.org.tw/course/CT407a","time":"※海外合作課程（限合作單位同學選讀） 上課日期：115/2/7、3/7、3/28、5/2、6/6","teacher":"郭英調","teacherUrl":"https://tee.ces.org.tw/course/teacher/CT407a","category":"神學類"},
+            {"serial":"023","name":"福音領袖塑造","nameUrl":"https://tee.ces.org.tw/course/PA336","time":"※外區合作課程（限合作單位同學選讀） 上課日期：115/2/24-5/19","teacher":"施永昌","teacherUrl":"https://tee.ces.org.tw/course/teacher/PA336","category":"教牧類"},
+            {"serial":"024","name":"穆斯林世界觀與福音策略","nameUrl":"https://tee.ces.org.tw/course/EM310","time":"※海外合作課程（限合作單位同學選讀） 上課日期：115/3/2-5/4","teacher":"彭書穎","teacherUrl":"https://tee.ces.org.tw/course/teacher/EM310","category":"宣教類"},
+            {"serial":"025","name":"新約概論(上)","nameUrl":"https://tee.ces.org.tw/course/NT203a","time":"※外區合作課程（限合作單位同學選讀） 上課日期：115/3/18-5/6","teacher":"林智偉","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT203a","category":"新約類"},
+            {"serial":"026","name":"助人歷程與技巧","nameUrl":"https://tee.ces.org.tw/course/PC818b","time":"※外區合作課程（限合作單位同學選讀） 上課日期：115/3/18-5/22","teacher":"孫榮岩","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC818b","category":"輔導類"},
+            {"serial":"027","name":"領袖學學領袖","nameUrl":"https://tee.ces.org.tw/course/PA250","time":"※外區合作課程（限合作單位同學選讀） 上課日期：115/4/7-5/19","teacher":"洪淑姮","teacherUrl":"https://tee.ces.org.tw/course/teacher/PA250","category":"教牧類"},
+            {"serial":"028","name":"摩西五經導讀","nameUrl":"https://tee.ces.org.tw/course/OT213w","time":"※外區合作課程（限合作單位同學選讀） 上課日期：115/4/9-5/21","teacher":"郭念平","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT213w","category":"舊約類"},
+            {"serial":"029","name":"宣教士關顧","nameUrl":"https://tee.ces.org.tw/course/EM308","time":"※海外合作課程（限合作單位同學選讀） 週一午 2025/12/1~2026/2/2","teacher":"金克宜","teacherUrl":"https://tee.ces.org.tw/course/teacher/EM308","category":"宣教類"},
+            {"serial":"030","name":"摩西五經(下)【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/OT230","time":"網上上課，90天內完成課程","teacher":"賴建國<br>黃彩雲","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT230","category":"舊約類"},
+            {"serial":"031","name":"小先知書【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/OT233","time":"網上上課，90天內完成課程","teacher":"蔡筱楓<br>邱琳雅","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT233","category":"舊約類"},
+            {"serial":"032","name":"詩篇選讀【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/OT235","time":"網上上課，90天內完成課程","teacher":"賴建國<br>邱琳雅","teacherUrl":"https://tee.ces.org.tw/course/teacher/OT235","category":"舊約類"},
+            {"serial":"033","name":"馬可福音【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT102a","time":"網上上課，90天內完成課程","teacher":"葉雅蓮<br>蘇美雅","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT102a","category":"新約類"},
+            {"serial":"034","name":"希伯來書【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT114b","time":"網上上課，90天內完成課程","teacher":"吳存仁<br>田心","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT114b","category":"新約類"},
+            {"serial":"035","name":"使徒行傳【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT133","time":"網上上課，90天內完成課程","teacher":"蔡筱楓<br>姜蓓蒂","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT133","category":"新約類"},
+            {"serial":"036","name":"啟示錄(下)【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT135","time":"網上上課，90天內完成課程","teacher":"吳獻章<br>黃惠冠","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT135","category":"新約類"},
+            {"serial":"037","name":"保羅書信(下)【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT248","time":"網上上課，90天內完成課程","teacher":"蔡筱楓<br>陳芷云","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT248","category":"新約類"},
+            {"serial":"038","name":"一般書信【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/NT249","time":"網上上課，90天內完成課程","teacher":"王良玉<br>高琳","teacherUrl":"https://tee.ces.org.tw/course/teacher/NT249","category":"新約類"},
+            {"serial":"039","name":"實用釋經學(下)【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/BH130","time":"網上上課，90天內完成課程","teacher":"蔡筱楓<br>魏玉琴","teacherUrl":"https://tee.ces.org.tw/course/teacher/BH130","category":"釋經類"},
+            {"serial":"040","name":"基督教神學(下)【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/CT250","time":"網上上課，90天內完成課程","teacher":"王瑞珍<br>俞貴馨","teacherUrl":"https://tee.ces.org.tw/course/teacher/CT250","category":"神學類"},
+            {"serial":"041","name":"成功的老化【多媒體聖經】","nameUrl":"https://tee.ces.org.tw/course/PC815b","time":"網上上課，90天內完成課程","teacher":"張宰金<br>施清玲","teacherUrl":"https://tee.ces.org.tw/course/teacher/PC815b","category":"輔導類"},
+            ];
 
         // 解析 URL 參數
         function getUrlParams() {
@@ -479,6 +219,7 @@
 </body>
 
 </html>
+
 
 
 
