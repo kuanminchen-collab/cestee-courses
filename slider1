@@ -1,0 +1,69 @@
+<!-- 引入 SwiperJS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- 橫幅滿版輪播 -->
+<div class="swiper mySwiper" style="width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);">
+  <div class="swiper-wrapper" style="height:100%;">
+    <!-- 更換下方圖片與連結 -->
+<!-- 第1張 -->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/PA353" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/A01.png?raw=true" style="width:100%">
+      </a>
+    </div>
+<!-- 第2張 -->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/PA251" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/A02.png?raw=true" style="width:100%">
+      </a>
+    </div>
+<!-- 第3張 -->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/PA123" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/A03.png?raw=true" style="width:100%">
+      </a>
+    </div>
+<!-- 第4張 -->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/PC834" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/A04.png?raw=true" style="width:100%">
+      </a>
+    </div>
+<!-- 第5張-->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/CT274" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/A05.png?raw=true" style="width:100%">
+      </a>
+    </div>
+<!-- 第6張-->
+    <div class="swiper-slide">
+      <a href="https://tee.ces.edu.tw/course/PA239a" target="_blank">
+	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/B01.png?raw=true" style="width:100%">
+      </a>
+    </div>
+  </div>
+  <!-- 導航控制 -->
+  <div class="swiper-pagination" style="bottom:20px;"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<!-- 引入 SwiperJS JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- 初始化 Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+</script>
