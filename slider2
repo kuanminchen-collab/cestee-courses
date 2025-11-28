@@ -7,55 +7,55 @@
     <!-- 更換下方圖片與連結 -->
 <!-- 第1張 -->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/LA158" target="_blank">
+      <a href="https://tee.ces.org.tw/course/LA158" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/6.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第2張 -->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/PC129" target="_blank">
+      <a href="https://tee.ces.org.tw/course/PC129" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/7.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第3張 -->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/PC524" target="_blank">
+      <a href="https://tee.ces.org.tw/course/PC524" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/8.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第4張 -->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/EM309" target="_blank">
+      <a href="https://tee.ces.org.tw/course/EM309" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/9.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第5張-->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/EM310a" target="_blank">
+      <a href="https://tee.ces.org.tw/course/EM310a" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/10.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第6張-->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/OT254" target="_blank">
+      <a href="https://tee.ces.org.tw/course/OT254" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/11.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第7張-->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/NT335" target="_blank">
+      <a href="https://tee.ces.org.tw/course/NT335" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/12.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第8張-->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/PA249" target="_blank">
+      <a href="https://tee.ces.org.tw/course/PA249" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/13.png?raw=true" style="width:100%">
       </a>
     </div>
 <!-- 第9張-->
     <div class="swiper-slide">
-      <a href="https://tee.ces.edu.tw/course/PA352" target="_blank">
+      <a href="https://tee.ces.org.tw/course/PA352" target="_blank">
 	<img src="https://github.com/kuanminchen-collab/cestee-courses/blob/main/14.png?raw=true" style="width:100%">
       </a>
     </div>
