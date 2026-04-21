@@ -167,7 +167,7 @@
                 // 課程形式條件
                 let matchesMode = true;
                 if (mode === 'video') {
-                    matchesMode = timeText(course).includes('全視訊課程') || timeText(course).includes('同步視訊課程');
+                    matchesMode = timeText(course).includes('視訊');
                 } else if (mode === 'physical') {
                     matchesMode = timeText(course).includes('實體課程') || timeText(course).includes('同步視訊課程');
                 }
